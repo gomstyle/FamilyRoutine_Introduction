@@ -9,35 +9,56 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f4f6f8;
+    background-color: #eef1f4;
     color: #222;
     line-height: 1.6;
-    font-size: 14px; /* 전체 기본 폰트 크기 축소 */
+    font-size: 14px;
 }
 
 .container {
-    max-width: 720px;
-    margin: auto;
-    padding: 20px 16px 50px 16px;
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 28px 20px 60px 20px;
     background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.brand img {
+    width: 72px;
+    border-radius: 18px;
+    margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 20px; /* 기존 24 → 축소 */
-    margin-bottom: 8px;
+    font-size: 22px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.divider {
+    height: 1px;
+    background: #eee;
+    margin: 22px 0;
 }
 
 h2 {
-    font-size: 16px; /* 기존 18 → 축소 */
-    margin-top: 32px;
-    margin-bottom: 10px;
+    font-size: 17px;
+    margin-top: 36px;
+    margin-bottom: 12px;
     border-left: 4px solid #4CAF50;
-    padding-left: 8px;
+    padding-left: 10px;
 }
 
 p {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 ul {
@@ -45,7 +66,7 @@ ul {
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-size: 14px;
 }
 
@@ -54,37 +75,68 @@ li {
     font-weight: bold;
 }
 
-/* 스크린샷 2열 그리드 */
+/* 스토어 버튼 */
+.store-button {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 12px;
+    transition: 0.2s ease;
+}
+
+.store-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* 가이드라인 버튼 */
+.guide-button {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 40px;
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: white;
+    transition: 0.2s ease;
+}
+
+.guide-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* 스크린샷 그리드 */
 .screenshot-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 14px;
     margin-top: 20px;
 }
 
 .screenshot-grid img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-.button {
-    display: block;
-    text-align: center;
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px;
-    margin-top: 36px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
+/* PC에서는 4열 */
+@media (min-width: 768px) {
+    .screenshot-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .footer {
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 12px;
     color: #777;
+    text-align: center;
 }
 </style>
 </head>
@@ -93,7 +145,14 @@ li {
 
 <div class="container">
 
+<div class="brand">
+    <!-- 앱 아이콘 파일명 맞게 수정 -->
+    <img src="app_icon.png" alt="패밀리 루틴 앱 아이콘">
+</div>
+
 <h1>가족의 하루를 한 곳에서 정리하세요.</h1>
+
+<div class="divider"></div>
 
 <p>
 패밀리 루틴은 가족 구성원별로  
@@ -128,31 +187,32 @@ li {
     <img src="screen7.png" alt="스크린샷7">
     <img src="screen8.png" alt="스크린샷8">
 </div>
-    
+
 <h2>앱 다운로드</h2>
 
-<div style="margin-top:15px;">
-    <a href="https://play.google.com/store/apps/details?id=com.gomsoft.familyroutine" 
-       target="_blank"
-       style="display:block; text-align:center; background:#4CAF50; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; margin-bottom:10px;">
-        Google Play에서 다운로드
-    </a>
+<a href="https://play.google.com/store/apps/details?id=com.gomsoft.familyroutine"
+   target="_blank"
+   class="store-button"
+   style="background:#4CAF50; color:white;">
+   Google Play에서 다운로드
+</a>
 
-    <a href="https://apps.apple.com/kr/app/id6757383092" 
-       target="_blank"
-       style="display:block; text-align:center; background:#000000; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;">
-        Apple App Store에서 다운로드
-    </a>
-</div>
-    
+<a href="https://apps.apple.com/kr/app/id6757383092"
+   target="_blank"
+   class="store-button"
+   style="background:#000000; color:white;">
+   Apple App Store에서 다운로드
+</a>
+
 <h2>구독 안내</h2>
+
 <p>
 패밀리 루틴은 <span class="highlight">30일 무료 체험</span> 후  
 각 스토어 정책에 따른 구독 방식으로 운영됩니다.
 </p>
 
 <p>
-구독 및 결제 관리는 사용 중인 스토어 계정<br>
+구독 및 결제 관리는 사용 중인 스토어 계정  
 (Google Play 또는 Apple App Store)을 기준으로 처리되며,  
 앱 로그인 계정과는 별도로 관리됩니다.
 </p>
@@ -165,7 +225,7 @@ li {
 각 스토어를 통해 안전하게 관리됩니다.
 </p>
 
-<a href="여기에_구글폼_링크_입력" class="button">
+<a href="여기에_구글폼_링크_입력" class="guide-button">
 협업 가이드라인 확인하기
 </a>
 
