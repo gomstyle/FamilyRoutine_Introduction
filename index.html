@@ -107,33 +107,25 @@ h2 {
 /* ===== 기능 카드 ===== */
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 모바일 2개 */
     gap: 14px;
+    margin-top: 20px;
 }
 
 .feature-card {
     background: #f7f9fb;
-    padding: 16px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    transition: 0.2s ease;
-}
-
-.feature-card:hover {
-    background: #eef6f0;
-    transform: translateY(-2px);
-}
-
-.feature-icon {
-    font-size: 20px;
-    flex-shrink: 0;
-}
-
-.feature-text {
+    padding: 14px;
+    border-radius: 14px;
+    font-weight: 500;
     font-size: 13px;
-    font-weight: 600;
+    text-align: center;
+}
+
+/* PC에서는 3개 */
+@media (min-width: 768px) {
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* ===== 스크린샷 ===== */
@@ -241,55 +233,16 @@ h2 {
 <div class="divider"></div>
     
 <h2>주요 기능</h2>
-<div class="feature-card">
-  <div class="feature-icon">👨‍👩‍👧‍👦</div>
-  <div class="feature-text">가족 개별 프로필</div>
-</div>
-
-<div class="feature-card">
-  <div class="feature-icon">📅</div>
-  <div class="feature-text">일정·기록 캘린더</div>
-</div>
-
-<div class="feature-card">
-  <div class="feature-icon">⏰</div>
-  <div class="feature-text">루틴·타임라인</div>
-</div>
-
-<div class="feature-card">
-  <div class="feature-icon">✅</div>
-  <div class="feature-text">To Do List</div>
-</div>
-
-<div class="feature-card">
-  <div class="feature-icon">📝</div>
-  <div class="feature-text">메모 & 일기</div>
-</div>
-
-<div class="feature-card">
-  <div class="feature-icon">💰</div>
-  <div class="feature-text">월간 지출 관리</div>
-</div>
-
-<div class="feature-card">
-  <div class="feature-icon">💉</div>
-  <div class="feature-text">예방접종 기록</div>
-</div>
-
-<div class="feature-card">
-  <div class="feature-icon">📊</div>
-  <div class="feature-text">키·체중·BMI</div>
-</div>
-
-<div class="feature-card">
-  <div class="feature-icon">👕</div>
-  <div class="feature-text">의류 사이즈 기록</div>
-</div>
-
-<div class="feature-card">
-  <div class="feature-icon">🌸</div>
-  <div class="feature-text">월경·가임기</div>
-</div>
+<div class="feature-card">👨‍👩‍👧‍👦 가족 개별 프로필</div>
+<div class="feature-card">📅 일정·기록 캘린더</div>
+<div class="feature-card">⏰ 루틴·타임라인</div>
+<div class="feature-card">✅ To Do List</div>
+<div class="feature-card">📝 메모 & 일기</div>
+<div class="feature-card">💰 월간 지출 관리</div>
+<div class="feature-card">💉 예방접종 기록</div>
+<div class="feature-card">📊 키·체중·BMI</div>
+<div class="feature-card">👕 의류 사이즈 기록</div>
+<div class="feature-card">🌸 월경·가임기</div>
 
 <h2>앱 화면 미리보기</h2>
 <div class="screenshot-grid">
